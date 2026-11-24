@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AG et comptes rendus — AG des personnels</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="menu.js" defer></script>
+</head>
+<body>
+
+<!--
+  =====================================================================
+  PAGE : LISTE DES AG ET COMPTES RENDUS
+  ---------------------------------------------------------------------
+  Cette page a deux parties :
+    1. la prochaine AG (à recopier aussi sur la page d'accueil index.html) ;
+    2. la liste des AG passées, de la plus récente à la plus ancienne.
+
+  POUR AJOUTER UN COMPTE RENDU :
+    a) Déposez le fichier PDF du compte rendu dans le dossier "comptes-rendus"
+       (sur GitHub : ouvrir le dossier > "Add file" > "Upload files").
+       Conseil : nommez-le avec la date, ex. 2026-12-04.pdf
+    b) Copiez un bloc <details> ... </details> ci-dessous (repéré par
+       "DÉBUT D'UNE AG" / "FIN D'UNE AG"), collez-le EN HAUT de la liste,
+       puis changez la date, le résumé, les décisions et le nom du fichier.
+  =====================================================================
+-->
+
+<main id="contenu">
+
+  <h1>AG et comptes rendus</h1>
+  <p class="chapeau">
+    Dates des assemblées générales et comptes rendus des séances passées.
+  </p>
+
+  <!-- ============ 1. PROCHAINE AG ============ -->
+  <section class="encadre">
+    <h2>Prochaine AG</h2>
+    <dl class="infos">
+      <dt>Date</dt>  <dd>Jeudi 4 décembre 2026</dd>
+      <dt>Heure</dt> <dd>12 h 30 – 14 h</dd>
+      <dt>Lieu</dt>  <dd>Amphi à préciser, campus de Talence</dd>
+    </dl>
+    <h3>Ordre du jour provisoire</h3>
+    <ol>
+      <li>Point d'information sur l'action en cours</li>
+      <li>Bilan de la mobilisation du mois</li>
+      <li>Points proposés sur le site (voir les plus soutenus)</li>
+      <li>Questions diverses</li>
+    </ol>
+  </section>
+
+  <!-- ============ 2. AG PASSÉES ============
+       Cliquer sur une AG déplie son résumé. -->
+  <h2>AG passées</h2>
+
+  <!-- ---------- DÉBUT D'UNE AG (copier à partir d'ici) ---------- -->
+  <details>
+    <!-- Ligne toujours visible : date et lieu -->
+    <summary>AG du jeudi 20 novembre 2026 — Talence</summary>
+
+    <p><strong>Participants :</strong> environ 60 personnes</p>
+
+    <!-- Résumé en quelques lignes -->
+    <p>
+      Résumé de la séance en quelques phrases : sujets abordés,
+      ambiance générale, points reportés.
+    </p>
+
+    <!-- Décisions votées : une ligne <li> par décision -->
+    <p><strong>Décisions :</strong></p>
+    <ul>
+      <li>Exemple : organisation d'une action du 1er au 12 décembre (adopté)</li>
+      <li>Exemple : rédaction d'une lettre ouverte à la présidence (adopté)</li>
+    </ul>
+
+    <!-- Lien vers le PDF : remplacez le nom du fichier après "comptes-rendus/" -->
+    <p><a href="comptes-rendus/2026-11-20.pdf">Télécharger le compte rendu complet (PDF)</a></p>
+  </details>
+  <!-- ---------- FIN D'UNE AG (jusqu'ici) ---------- -->
+
+  <details>
+    <summary>AG du mardi 4 novembre 2026 — Carreire</summary>
+    <p><strong>Participants :</strong> environ 45 personnes</p>
+    <p>
+      Résumé de la séance en quelques phrases.
+    </p>
+    <p><strong>Décisions :</strong></p>
+    <ul>
+      <li>Exemple : création de ce site pour centraliser les informations (adopté)</li>
+    </ul>
+    <p><a href="comptes-rendus/2026-11-04.pdf">Télécharger le compte rendu complet (PDF)</a></p>
+  </details>
+
+  <p class="mise-a-jour">Dernière mise à jour : 24 novembre 2026</p>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informations générales — AG des personnels</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="menu.js" defer></script>
+</head>
+<body>
+
+<!--
+  =====================================================================
+  PAGE : INFORMATIONS GÉNÉRALES
+  ---------------------------------------------------------------------
+  Trois parties :
+    1. Votes déjà faits   (tableau)
+    2. Revendications     (liste)
+    3. Infos syndicales   (liste de liens et contacts)
+
+  TABLEAU DES VOTES :
+    - Une ligne <tr> ... </tr> par vote, la plus récente en haut.
+    - Colonnes : Date | Motion | Pour | Contre | Abst. | Résultat
+    - Pour le résultat, copiez l'une de ces deux formes :
+        <span class="adopte">Adoptée</span>   (vert)
+        <span class="rejete">Rejetée</span>   (rouge)
+  =====================================================================
+-->
+
+<main id="contenu">
+
+  <h1>Informations générales</h1>
+  <p class="chapeau">
+    Ce qui a été voté, ce que nous demandons, et où trouver l'information syndicale.
+  </p>
+
+  <!-- Petit sommaire de la page (liens vers les parties plus bas) -->
+  <p>
+    <a href="#votes">Votes déjà faits</a> ·
+    <a href="#revendications">Revendications</a> ·
+    <a href="#syndicats">Infos syndicales</a>
+  </p>
+
+  <!-- ============ 1. VOTES DÉJÀ FAITS ============ -->
+  <h2 id="votes">Votes déjà faits</h2>
+
+  <div class="tableau-conteneur">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Motion</th>
+          <th>Pour</th>
+          <th>Contre</th>
+          <th>Abst.</th>
+          <th>Résultat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ---------- Un vote = une ligne ---------- -->
+        <tr>
+          <td>20/11/2026</td>
+          <td>Organiser une action du 1er au 12 décembre</td>
+          <td>48</td>
+          <td>3</td>
+          <td>6</td>
+          <td><span class="adopte">Adoptée</span></td>
+        </tr>
+        <tr>
+          <td>20/11/2026</td>
+          <td>Lettre ouverte à la présidence</td>
+          <td>51</td>
+          <td>0</td>
+          <td>4</td>
+          <td><span class="adopte">Adoptée</span></td>
+        </tr>
+        <tr>
+          <td>04/11/2026</td>
+          <td>Créer un site pour centraliser les informations</td>
+          <td>39</td>
+          <td>2</td>
+          <td>4</td>
+          <td><span class="adopte">Adoptée</span></td>
+        </tr>
+        <tr>
+          <td>04/11/2026</td>
+          <td>Tenir les AG le soir plutôt qu'à midi</td>
+          <td>12</td>
+          <td>28</td>
+          <td>5</td>
+          <td><span class="rejete">Rejetée</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============ 2. REVENDICATIONS ============
+       Une ligne <li> par revendication.
+       <strong>...</strong> met le début en gras (le titre de la revendication). -->
+  <h2 id="revendications">Revendications</h2>
+  <p>Revendications adoptées en AG (exemples à remplacer) :</p>
+  <ul>
+    <li><strong>Première revendication :</strong> explication en une ou deux phrases.</li>
+    <li><strong>Deuxième revendication :</strong> explication en une ou deux phrases.</li>
+    <li><strong>Troisième revendication :</strong> explication en une ou deux phrases.</li>
+  </ul>
+
+  <!-- ============ 3. INFOS SYNDICALES ============
+       Pour chaque organisation : nom, lien vers son site, contact.
+       Remplacez les adresses https://exemple.fr et les e-mails. -->
+  <h2 id="syndicats">Infos syndicales</h2>
+  <p>
+    Les AG sont ouvertes à tous les personnels, syndiqués ou non.
+    Les organisations ci-dessous sont présentes dans l'université :
+  </p>
+  <ul>
+    <li><a href="https://exemple.fr">Syndicat A</a> — <a href="mailto:syndicat-a@exemple.fr">syndicat-a@exemple.fr</a></li>
+    <li><a href="https://exemple.fr">Syndicat B</a> — <a href="mailto:syndicat-b@exemple.fr">syndicat-b@exemple.fr</a></li>
+    <li><a href="https://exemple.fr">Syndicat C</a> — <a href="mailto:syndicat-c@exemple.fr">syndicat-c@exemple.fr</a></li>
+  </ul>
+
+  <h3>Dernières informations</h3>
+  <!-- Une ligne <li> par information, la plus récente en haut -->
+  <ul>
+    <li><strong>22/11 :</strong> Exemple d'information relayée (préavis de grève, appel national, réunion…).</li>
+    <li><strong>15/11 :</strong> Exemple d'information relayée.</li>
+  </ul>
+
+  <p class="mise-a-jour">Dernière mise à jour : 24 novembre 2026</p>
+
+</main>
+
+</body>
+</html>
