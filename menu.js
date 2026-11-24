@@ -47,11 +47,13 @@ var RUBRIQUES = [
 
 /* ---------- 3. PIED DE PAGE ----------
    Vous pouvez y mettre une adresse de contact.
-   Pour un lien e-mail, gardez la forme : <a href="mailto:adresse@exemple.fr">adresse@exemple.fr</a> */
+   Pour un lien e-mail cliquable, remplacez [À compléter] par :
+     <a href=\"mailto:adresse@exemple.fr\">adresse@exemple.fr</a>
+   (en gardant bien les \ devant les guillemets) */
 
 var PIED_DE_PAGE =
   "Site tenu par les AG des personnels. " +
-  "Contact : <a href=\"mailto:contact-ag@exemple.fr\">contact-ag@exemple.fr</a>";
+  "Contact : [À compléter]";
 
 
 /* =====================================================================

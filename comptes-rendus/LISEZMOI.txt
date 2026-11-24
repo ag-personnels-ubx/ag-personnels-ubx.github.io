@@ -1,0 +1,4 @@
+Déposez dans ce dossier les comptes rendus des AG au format PDF.
+
+Nommez chaque fichier avec la date de l'AG, sous la forme AAAA-MM-JJ.pdf
+(exemple : 2026-12-04.pdf), puis ajoutez le lien correspondant dans la page ag.html.
