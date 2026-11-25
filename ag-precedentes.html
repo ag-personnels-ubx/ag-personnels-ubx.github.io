@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AG précédentes — AG des personnels</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="menu.js" defer></script>
+</head>
+<body>
+
+<!--
+  =====================================================================
+  PAGE : AG PRÉCÉDENTES (historique)
+  ---------------------------------------------------------------------
+  Une AG = un bloc <details> ... </details>. La plus récente en HAUT.
+  Sur le site, on clique sur une AG pour déplier son résumé.
+
+  POUR AJOUTER UNE AG :
+    1. Copiez le bloc entre "DÉBUT D'UNE AG" et "FIN D'UNE AG".
+    2. Collez-le juste sous le titre "Historique", au-dessus des autres.
+    3. Remplacez les [À compléter].
+
+  POUR JOINDRE UN COMPTE RENDU EN PDF (facultatif) :
+    a) Déposez le PDF dans le dossier "comptes-rendus"
+       (sur GitHub : ouvrir le dossier > "Add file" > "Upload files").
+       Nommez-le avec la date, ex. 2026-12-04.pdf
+    b) Dans le bloc de l'AG, remplacez NOM-DU-FICHIER.pdf par ce nom.
+    Sans PDF, supprimez simplement la ligne du lien.
+  =====================================================================
+-->
+
+<main id="contenu">
+
+  <h1>AG précédentes</h1>
+  <p class="chapeau">Résumé et décisions de chaque AG, de la plus récente à la plus ancienne.</p>
+
+  <h2>Historique</h2>
+
+  <!-- ---------- DÉBUT D'UNE AG (copier à partir d'ici) ---------- -->
+  <details>
+    <!-- Ligne toujours visible : date et lieu -->
+    <summary>AG du [À compléter : date] — [À compléter : lieu]</summary>
+
+    <p><strong>Participants :</strong> [À compléter]</p>
+
+    <!-- Résumé en quelques lignes -->
+    <p>[À compléter : résumé de la séance]</p>
+
+    <!-- Décisions : une ligne <li> par décision -->
+    <p><strong>Décisions :</strong></p>
+    <ul>
+      <li>[À compléter]</li>
+    </ul>
+
+    <!-- Lien vers le PDF (facultatif) -->
+    <p><a href="comptes-rendus/NOM-DU-FICHIER.pdf">Compte rendu complet (PDF)</a></p>
+  </details>
+  <!-- ---------- FIN D'UNE AG (jusqu'ici) ---------- -->
+
+</main>
+
+</body>
+</html>

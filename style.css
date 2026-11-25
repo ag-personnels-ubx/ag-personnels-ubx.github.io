@@ -210,6 +210,13 @@ details {
 details summary { cursor: pointer; font-weight: bold; }
 details[open] summary { margin-bottom: 0.5rem; }
 
+/* Images (affiche, etc.) : ne dépassent jamais la largeur de la page */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--couleur-bordure);
+}
+
 /* ---------- Pied de page ---------- */
 
 .pied {

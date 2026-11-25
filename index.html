@@ -13,77 +13,59 @@
 
 <!--
   =====================================================================
-  PAGE D'ACCUEIL
+  PAGE D'ACCUEIL : LA PROCHAINE AG
   ---------------------------------------------------------------------
   COMMENT MODIFIER CETTE PAGE (à lire une fois) :
   - Ce qui est entre <!- - et - -> est un commentaire : il ne s'affiche pas,
     il sert seulement à expliquer.
   - Le texte visible se trouve ENTRE les balises, par exemple :
         <p>Ceci est un paragraphe.</p>
-        <h2>Ceci est un titre</h2>
         <li>Ceci est un élément de liste</li>
     On peut changer librement le texte, mais il faut garder les balises
     (<p> ... </p>, etc.) autour.
   - <strong>texte</strong> met le texte en gras.
-  - <a href="adresse">texte</a> crée un lien.
   - Remplacez chaque [À compléter] par votre texte.
 
-  Cette page reprend en résumé deux informations qui sont détaillées
-  ailleurs. Quand elles changent, pensez à mettre à jour :
-    1. ici (accueil)  ET  ag.html          pour la prochaine AG ;
-    2. ici (accueil)  ET  action.html      pour l'action en cours.
+  APRÈS UNE AG :
+    1. ajoutez son résumé sur la page ag-precedentes.html ;
+    2. revenez ici et remplacez les infos par celles de l'AG suivante.
   =====================================================================
 -->
 
 <main id="contenu">
 
-  <h1>Bienvenue</h1>
-  <!-- Phrase d'introduction -->
-  <p class="chapeau">[À compléter : une ou deux phrases pour présenter le site]</p>
+  <h1>Prochaine AG</h1>
 
-  <div class="deux-colonnes">
+  <!-- ============ DATE, HEURE, LIEU ============ -->
+  <section class="encadre">
+    <dl class="infos">
+      <dt>Date</dt>  <dd>[À compléter]</dd>
+      <dt>Heure</dt> <dd>[À compléter]</dd>
+      <dt>Lieu</dt>  <dd>[À compléter]</dd>
+    </dl>
+  </section>
 
-    <!-- ============ BLOC 1 : PROCHAINE AG ============ -->
-    <section class="encadre">
-      <h2>Prochaine AG</h2>
-      <dl class="infos">
-        <dt>Date</dt>  <dd>[À compléter]</dd>
-        <dt>Heure</dt> <dd>[À compléter]</dd>
-        <dt>Lieu</dt>  <dd>[À compléter]</dd>
-      </dl>
+  <!-- ============ ORDRE DU JOUR ============
+       Une ligne <li> ... </li> par point. Ajoutez ou supprimez des lignes. -->
+  <h2>Ordre du jour</h2>
+  <ol>
+    <li>[À compléter]</li>
+    <li>[À compléter]</li>
+  </ol>
 
-      <h3>Ordre du jour provisoire</h3>
-      <!-- Une ligne <li> ... </li> par point. Ajoutez ou supprimez des lignes. -->
-      <ol>
-        <li>[À compléter]</li>
-        <li>[À compléter]</li>
-      </ol>
-
-      <p><a href="ordre-du-jour.html">Proposer ou soutenir un point</a></p>
-    </section>
-
-    <!-- ============ BLOC 2 : ACTION DU MOMENT ============
-         Résumé court. Le détail est sur la page action.html. -->
-    <section class="encadre">
-      <h2>Action du moment</h2>
-      <h3>[À compléter : nom de l'action]</h3>
-      <p>[À compléter : l'action en une ou deux phrases]</p>
-      <dl class="infos">
-        <dt>Quand</dt>  <dd>[À compléter]</dd>
-        <dt>Besoin</dt> <dd>[À compléter]</dd>
-      </dl>
-      <p><a class="bouton" href="action.html">Voir l'organisation et s'inscrire</a></p>
-    </section>
-
-  </div>
-
-  <!-- ============ BLOC 3 : LIENS RAPIDES ============ -->
-  <h2>Participer</h2>
+  <!-- ============ INFOS PRATIQUES ============
+       Accès, visio, garde d'enfants, pause méridienne... Une ligne <li> par info.
+       Supprimez toute cette partie (du <h2> au </ul>) si elle ne sert pas. -->
+  <h2>Infos pratiques</h2>
   <ul>
-    <li><a href="ag.html">Lire les comptes rendus des AG précédentes</a></li>
-    <li><a href="taches-permanentes.html">Donner un coup de main régulier</a></li>
-    <li><a href="fonctionnement.html">Comprendre comment se déroule une AG</a></li>
-    <li><a href="idees.html">Déposer une idée dans la boîte à idées</a></li>
+    <li>[À compléter]</li>
+  </ul>
+
+  <!-- ============ AG SUIVANTES ============
+       Dates déjà prévues pour les AG d'après. Une ligne <li> par AG. -->
+  <h2>AG suivantes</h2>
+  <ul>
+    <li>[À compléter : date — lieu]</li>
   </ul>
 
   <!-- Pensez à changer cette date à chaque modification -->

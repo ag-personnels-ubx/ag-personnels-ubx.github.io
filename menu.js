@@ -34,14 +34,12 @@ var SOUS_TITRE  = "Université de Bordeaux — informations, actions et comptes 
    Pour retirer une rubrique : supprimez sa ligne. */
 
 var RUBRIQUES = [
-  { texte: "Accueil",               page: "index.html" },
-  { texte: "Les AG",                page: "ag.html" },
-  { texte: "Action en cours",       page: "action.html" },
-  { texte: "Ordre du jour",         page: "ordre-du-jour.html" },
-  { texte: "Tâches permanentes",    page: "taches-permanentes.html" },
-  { texte: "Infos générales",       page: "infos.html" },
-  { texte: "Fonctionnement",        page: "fonctionnement.html" },
-  { texte: "Boîte à idées",         page: "idees.html" },
+  { texte: "Accueil",             page: "index.html" },
+  { texte: "AG précédentes",      page: "ag-precedentes.html" },
+  { texte: "Action en cours",     page: "action.html" },
+  { texte: "Tâches permanentes",  page: "taches-permanentes.html" },
+  { texte: "Infos générales",     page: "infos.html" },
+  { texte: "Fonctionnement",      page: "fonctionnement.html" },
 ];
 
 
@@ -62,7 +60,7 @@ var PIED_DE_PAGE =
    ===================================================================== */
 
 (function () {
-  // Nom du fichier de la page affichée (ex. "ag.html"), pour souligner la bonne rubrique
+  // Nom du fichier de la page affichée (ex. "action.html"), pour souligner la bonne rubrique
   var pageActuelle = window.location.pathname.split("/").pop() || "index.html";
 
   var liens = RUBRIQUES.map(function (r) {
