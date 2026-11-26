@@ -36,7 +36,7 @@ var SOUS_TITRE  = "Université de Bordeaux — informations, actions et comptes 
 var RUBRIQUES = [
   { texte: "Accueil",             page: "index.html" },
   { texte: "AG précédentes",      page: "ag-precedentes.html" },
-  { texte: "Infos générales",     page: "infos.html" },
+  { texte: "Ressources",     page: "infos.html" },
 ];
 
 
