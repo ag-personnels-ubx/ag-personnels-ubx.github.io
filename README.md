@@ -27,15 +27,6 @@ Site simple (pages HTML, sans base de données) pour centraliser les information
 
 **Après chaque AG** : ajouter son résumé dans `ag-precedentes.html`, puis mettre les infos de l'AG suivante dans `index.html`.
 
-## Mettre le site en ligne avec GitHub Pages
-
-1. Créer un dépôt sur GitHub (par exemple `site-ag`) et y déposer tous les fichiers de ce dossier (« Add file » > « Upload files »).
-2. Dans le dépôt : **Settings** > **Pages**.
-3. Dans « Build and deployment », choisir **Deploy from a branch**, branche `main`, dossier `/ (root)`, puis **Save**.
-4. Après une ou deux minutes, l'adresse du site s'affiche en haut de cette page (de la forme `https://nom-du-compte.github.io/site-ag/`).
-
-Conseil : créer une **organisation** GitHub pour le collectif plutôt qu'utiliser un compte personnel, et y ajouter les personnes qui mettent à jour le site.
-
 ## À configurer une fois
 
 - `menu.js` : nom du site, sous-titre, adresse de contact.
