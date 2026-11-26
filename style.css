@@ -19,7 +19,10 @@
 :root {
   --couleur-principale: #3B1C13;   /* marron « café » (charte) : bandeau, liens, boutons */
   --couleur-principale-fonce: #635141; /* taupe foncé (charte) : survol */
-  --couleur-accent: #009DE0;       /* cyan (charte) : traits, page active, bordures */
+  --couleur-accent: #009DE0;       /* cyan (charte) : traits sous les titres, bordures */
+  --couleur-bandeau: #009DE0;      /* cyan (charte) : fond du bandeau et du menu en haut */
+  --couleur-bandeau-survol: #4DBAE9; /* cyan plus clair : survol des liens du menu */
+  --couleur-texte-bandeau: #3B1C13;  /* texte du bandeau (marron, plus lisible que le blanc sur le cyan) */
   --couleur-texte: #222222;        /* texte normal */
   --couleur-texte-discret: #635141;/* dates, petites mentions */
   --couleur-fond: #ffffff;         /* fond des pages */
@@ -72,8 +75,8 @@ h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
 /* ---------- Bandeau du haut (nom du site) ---------- */
 
 .entete {
-  background: var(--couleur-principale);
-  color: #fff;
+  background: var(--couleur-bandeau);
+  color: var(--couleur-texte-bandeau);
 }
 .entete-interieur {
   max-width: var(--largeur-max);
@@ -84,10 +87,10 @@ h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
   font-family: "Bitter", Georgia, serif;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
+  color: var(--couleur-texte-bandeau);
   text-decoration: none;
 }
-.nom-site:hover { color: #fff; text-decoration: underline; }
+.nom-site:hover { color: var(--couleur-texte-bandeau); text-decoration: underline; }
 .sous-titre-site {
   margin: 0.1rem 0 0;
   font-size: 0.95rem;
@@ -97,8 +100,8 @@ h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
 /* ---------- Barre de navigation horizontale ---------- */
 
 .menu {
-  background: var(--couleur-principale);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--couleur-bandeau);
+  border-top: 1px solid rgba(59, 28, 19, 0.2);
 }
 .menu ul {
   list-style: none;
@@ -111,14 +114,14 @@ h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
 .menu a {
   display: block;
   padding: 0.65rem 0.55rem;
-  color: #fff;
+  color: var(--couleur-texte-bandeau);
   text-decoration: none;
   font-size: 0.95rem;
   border-bottom: 3px solid transparent;
 }
-.menu a:hover { background: var(--couleur-principale-fonce); }
+.menu a:hover { background: var(--couleur-bandeau-survol); }
 .menu a.page-active {
-  border-bottom-color: var(--couleur-accent);
+  border-bottom-color: var(--couleur-texte-bandeau);
   font-weight: bold;
 }
 
