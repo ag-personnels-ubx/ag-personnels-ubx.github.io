@@ -47,8 +47,7 @@ var RUBRIQUES = [
    (en gardant bien les \ devant les guillemets) */
 
 var PIED_DE_PAGE =
-  "Site tenu par les AG des personnels. " +
-  "Contact : [À compléter]";
+  "Site tenu par les AG des personnels. ";
 
 
 /* =====================================================================
