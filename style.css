@@ -1,0 +1,245 @@
+/* =====================================================================
+   FEUILLE DE STYLE DU SITE (apparence : couleurs, polices, marges)
+   ---------------------------------------------------------------------
+   Ce fichier est partagé par TOUTES les pages.
+   En général, vous n'avez pas besoin d'y toucher.
+
+   Les couleurs reprennent la charte graphique de l'université de Bordeaux
+   (version de février 2023) : couleurs principales cyan et marron (« café »),
+   plus le beige et le taupe de la palette secondaire.
+
+   Pour changer une couleur, modifiez seulement les valeurs juste en dessous
+   (les lignes qui commencent par --).
+   Une couleur s'écrit sous la forme #RRVVBB.
+   ===================================================================== */
+
+/* Police des titres : Bitter, police recommandée par la charte de l'université */
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&display=swap");
+
+:root {
+  --couleur-principale: #3B1C13;   /* marron « café » (charte) : bandeau, liens, boutons */
+  --couleur-principale-fonce: #635141; /* taupe foncé (charte) : survol */
+  --couleur-accent: #009DE0;       /* cyan (charte) : traits, page active, bordures */
+  --couleur-texte: #222222;        /* texte normal */
+  --couleur-texte-discret: #635141;/* dates, petites mentions */
+  --couleur-fond: #ffffff;         /* fond des pages */
+  --couleur-fond-encadre: #F3F0E8; /* beige très clair (dérivé du beige de la charte) */
+  --couleur-fond-tableau: #E7E2D1; /* beige (charte) : en-têtes de tableau */
+  --couleur-bordure: #D1C7AD;      /* mastic (charte) : traits de séparation */
+  --largeur-max: 64rem;            /* largeur maximale du texte */
+}
+
+/* ---------- Réglages de base ---------- */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--couleur-texte);
+  background: var(--couleur-fond);
+}
+
+a { color: var(--couleur-principale); }
+a:hover { color: var(--couleur-principale-fonce); }
+
+h1, h2, h3 {
+  line-height: 1.25;
+  font-family: "Bitter", Georgia, serif;
+  color: var(--couleur-principale);
+}
+h1 { font-size: 1.9rem; margin: 0 0 0.5rem; }
+h2 {
+  font-size: 1.35rem;
+  margin: 2.2rem 0 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--couleur-accent);
+}
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
+
+/* Lien "Aller au contenu" pour la navigation au clavier (invisible sinon) */
+.lien-evitement {
+  position: absolute;
+  left: -999px;
+}
+.lien-evitement:focus {
+  left: 1rem; top: 1rem;
+  background: #fff; padding: 0.5rem; z-index: 10;
+}
+
+/* ---------- Bandeau du haut (nom du site) ---------- */
+
+.entete {
+  background: var(--couleur-principale);
+  color: #fff;
+}
+.entete-interieur {
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  padding: 1rem 1.25rem 0.6rem;
+}
+.nom-site {
+  font-family: "Bitter", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+.nom-site:hover { color: #fff; text-decoration: underline; }
+.sous-titre-site {
+  margin: 0.1rem 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* ---------- Barre de navigation horizontale ---------- */
+
+.menu {
+  background: var(--couleur-principale);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.menu ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+  max-width: var(--largeur-max);
+  display: flex;
+  flex-wrap: wrap;          /* sur petit écran, le menu passe sur plusieurs lignes */
+}
+.menu a {
+  display: block;
+  padding: 0.65rem 0.55rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 3px solid transparent;
+}
+.menu a:hover { background: var(--couleur-principale-fonce); }
+.menu a.page-active {
+  border-bottom-color: var(--couleur-accent);
+  font-weight: bold;
+}
+
+/* ---------- Contenu principal ---------- */
+
+main {
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.chapeau {               /* phrase d'introduction en haut d'une page */
+  font-size: 1.1rem;
+  color: var(--couleur-texte-discret);
+  margin-top: 0;
+}
+
+.mise-a-jour {           /* "Dernière mise à jour : ..." */
+  font-size: 0.9rem;
+  color: var(--couleur-texte-discret);
+}
+
+/* Encadré gris (utilisé pour la prochaine AG, les actions, etc.) */
+.encadre {
+  background: var(--couleur-fond-encadre);
+  border-left: 4px solid var(--couleur-accent);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0 1.5rem;
+}
+.encadre h2, .encadre h3 { margin-top: 0; border: none; padding: 0; }
+.encadre p:last-child { margin-bottom: 0; }
+
+/* Deux colonnes côte à côte sur grand écran (page d'accueil) */
+.deux-colonnes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 45rem) {
+  .deux-colonnes { grid-template-columns: 1fr; }
+}
+
+/* Liste "Quand / Où / ..." */
+dl.infos { margin: 0.5rem 0; }
+dl.infos dt { font-weight: bold; float: left; width: 6.5rem; clear: left; }
+dl.infos dd { margin: 0 0 0.3rem 6.5rem; }
+
+/* Bouton (lien mis en forme comme un bouton) */
+.bouton {
+  display: inline-block;
+  background: var(--couleur-principale);
+  color: #fff;
+  padding: 0.55rem 1.1rem;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.bouton:hover { background: var(--couleur-principale-fonce); color: #fff; }
+
+/* ---------- Tableaux ---------- */
+
+.tableau-conteneur { overflow-x: auto; }   /* permet de faire défiler un tableau large sur téléphone */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.8rem 0 1.5rem;
+  font-size: 0.97rem;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+th {
+  background: var(--couleur-fond-tableau);
+  font-weight: bold;
+}
+
+/* Étiquettes de statut dans les tableaux (À faire / En cours / Fait) */
+.statut {
+  display: inline-block;
+  padding: 0.05rem 0.5rem;
+  font-size: 0.85rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.statut-a-faire  { background: #f6dcdc; color: #6b1515; }
+.statut-en-cours { background: #fbedc9; color: #6b4a00; }
+.statut-fait     { background: #dcefdc; color: #1c5a1c; }
+
+/* Résultat de vote */
+.adopte  { color: #1c5a1c; font-weight: bold; }
+.rejete  { color: #6b1515; font-weight: bold; }
+
+/* Bloc dépliable (comptes rendus, etc.) */
+details {
+  border: 1px solid var(--couleur-bordure);
+  padding: 0.6rem 1rem;
+  margin: 0.6rem 0;
+}
+details summary { cursor: pointer; font-weight: bold; }
+details[open] summary { margin-bottom: 0.5rem; }
+
+/* Images (affiche, etc.) : ne dépassent jamais la largeur de la page */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--couleur-bordure);
+}
+
+/* ---------- Pied de page ---------- */
+
+.pied {
+  border-top: 1px solid var(--couleur-bordure);
+  color: var(--couleur-texte-discret);
+  font-size: 0.9rem;
+}
+.pied-interieur {
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
